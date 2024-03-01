@@ -8,6 +8,9 @@ gem "rails", "~> 7.1.3"
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
+# This line tells Bundler to include the dotenv-rails gem in your project's development and test environments, but not in production.
+gem 'dotenv-rails', groups: [:development, :test]
+
 # Use mysql as the database for Active Record
 gem "mysql2", "~> 0.5"
 
@@ -19,6 +22,9 @@ gem "importmap-rails"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails"
+
+# http client gem
+gem 'httparty'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
