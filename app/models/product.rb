@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
-  belongs_to :brand
-  belongs_to :category
-  belongs_to :product_type
+  belongs_to :brand, optional: true
+  belongs_to :category, optional: true
+  belongs_to :product_type, optional: true
   has_many :product_tags
   has_many :tags, through: :product_tags
 
@@ -11,6 +11,7 @@ class Product < ApplicationRecord
   validates :image_link, presence: true
   validates :product_link, presence: true
   validates :description, presence: true
-  validates :rating, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 5 }, allow_nil: true
+  # validates :rating, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 10 }, allow_nil: true
 
+validates :rating, numericality: { greater_than_or_equal_to: 0, less_than_or_equal_to: 100 }, presence: true
 end

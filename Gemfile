@@ -26,6 +26,12 @@ gem "turbo-rails"
 # http client gem
 gem 'httparty'
 
+# bulk inserts
+gem 'activerecord-import'
+
+# faker
+gem 'faker'
+
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 
