@@ -1,0 +1,36 @@
+<header>
+  <h1>Home Page</h1>
+</header>
+
+<h2>Recommended Products</h2>
+<ul>
+  <% @recommended_products.each do |product| %>
+    <li>
+      <%= product.product_name %> -  Price: <%= product.price %> - Rating: <%= product.rating %>
+      <%# <%= link_to 'View Product', product_path(product) %>
+    </li>
+  <% end %>
+</ul>
+
+<h2>Categories</h2>
+<ul>
+  <% @categories.each do |category| %>
+    <li><%= category.category_name %></li>
+  <% end %>
+</ul>
+
+<h2>Brands</h2>
+<ul>
+  <% @brands.each do |brand| %>
+    <li><%= brand.brand_name %></li>
+  <% end %>
+</ul>
+
+
+<h2>Product Type</h2>
+<ul>
+  <% @product_types.each do |product_type| %>
+    <li><%= product_type.product_type_name %></li>
+  <% end %>
+</ul>
+
