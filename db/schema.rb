@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_29_164914) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_05_223411) do
   create_table "brands", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "brand_name"
     t.datetime "created_at", null: false
@@ -40,14 +40,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_29_164914) do
 
   create_table "products", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "product_name"
-    t.bigint "brand_id", null: false
+    t.bigint "brand_id"
     t.decimal "price", precision: 5, scale: 2
     t.text "image_link"
     t.text "product_link"
     t.text "description"
     t.decimal "rating", precision: 2, scale: 1
-    t.bigint "category_id", null: false
-    t.bigint "product_type_id", null: false
+    t.bigint "category_id"
+    t.bigint "product_type_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["brand_id"], name: "index_products_on_brand_id"

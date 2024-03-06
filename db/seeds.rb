@@ -36,6 +36,7 @@ if products
   new_product_tags = []
 
   products.each do |product_data|
+
     # find or create brand, category, and product_type
     brands_cache[product_data['brand']] ||= Brand.find_or_create_by(brand_name: product_data['brand'])
     #puts "brands_cache: #{brands_cache.count}, Brand table count: #{Brand.count}"
@@ -74,8 +75,8 @@ if products
       puts "Product link is nil, replaced with #{product_data['product_link']}"
     end
 
-    if product_data['rating'].nil?
-      product_data['rating'] = Faker::Number.between(from: 0, to: 10)
+    if product_data['rating'].nil? || product_data['rating'] >5
+      product_data['rating'] = Faker::Number.between(from: 0, to: 5)
       puts "Rating is nil, replaced with #{product_data['rating']}"
     end
 
