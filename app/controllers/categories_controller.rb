@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  def category
+  def categories
     @categories = Category.all
   end
 end

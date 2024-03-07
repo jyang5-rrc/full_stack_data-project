@@ -1,36 +1,74 @@
-<header>
-  <h1>Home Page</h1>
-</header>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Logo</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <%= link_to 'Home', root_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Category', categories_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Brand', brands_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Product Type', product_types_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'About', about_path, class: 'nav-link' %>
+          </li>
+        </ul>
+      </div>
+      <form class="form-inline" method="get" action="<%= search_path %>"> <!-- Adjust the action as per your routes -->
+        <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search products" aria-label="Search">
+        <select class="custom-select my-1 mr-sm-2" name="search_option">
+          <option value="product">Product name</option>
+          <option value="category">Category</option>
+          <option value="brand">Brand</option>
+          <option value="product_type">Product Type</option>
+          <option value="product_tag">Product Tag</option>
+        </select>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </nav>
+  </header>
 
-<h2>Recommended Products</h2>
-<ul>
-  <% @recommended_products.each do |product| %>
-    <li>
-      <%= product.product_name %> -  Price: <%= product.price %> - Rating: <%= product.rating %>
-      <%# <%= link_to 'View Product', product_path(product) %>
-    </li>
-  <% end %>
-</ul>
+  <h2>Recommended Products</h2>
+  <ul>
+    <% @recommended_products.each do |product| %>
+      <li>
+        <%= product.product_name %> -  Price: <%= product.price %> - Rating: <%= product.rating %>
+        <%# <%= link_to 'View Product', product_path(product) %>
+      </li>
+    <% end %>
+  </ul>
 
-<h2>Categories</h2>
-<ul>
-  <% @categories.each do |category| %>
-    <li><%= category.category_name %></li>
-  <% end %>
-</ul>
+  <h2>Categories</h2>
+  <ul>
+    <% @categories.each do |category| %>
+      <li><%= category.category_name %></li>
+    <% end %>
+  </ul>
 
-<h2>Brands</h2>
-<ul>
-  <% @brands.each do |brand| %>
-    <li><%= brand.brand_name %></li>
-  <% end %>
-</ul>
+  <h2>Brands</h2>
+  <ul>
+    <% @brands.each do |brand| %>
+      <li><%= brand.brand_name %></li>
+    <% end %>
+  </ul>
 
 
-<h2>Product Type</h2>
-<ul>
-  <% @product_types.each do |product_type| %>
-    <li><%= product_type.product_type_name %></li>
-  <% end %>
-</ul>
+  <h2>Product Type</h2>
+  <ul>
+    <% @product_types.each do |product_type| %>
+      <li><%= product_type.product_type_name %></li>
+    <% end %>
+  </ul>
+
+</body>
 

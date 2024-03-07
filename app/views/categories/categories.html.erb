@@ -1,0 +1,7 @@
+<h2>Categories</h2>
+  <ul>
+    <% @categories.each do |category| %>
+      <li><%= category.category_name %></li>
+    <% end %>
+  </ul>
+  <%= link_to 'Home page', root_path %>
