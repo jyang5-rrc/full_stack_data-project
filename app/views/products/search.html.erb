@@ -1,0 +1,11 @@
+<h1>Search Results</h1>
+
+<% if @results.present? %>
+  <% @results.each do |result| %>
+    <p><%= result.product_name %> - <%= result.category.category_name %>, <%= result.brand.brand_name %>,<%=result.product_type.product_type_name%></p>
+    <!-- Adjust the above line to match your model attributes -->
+  <% end %>
+<% else %>
+  <p>No results found.</p>
+<% end %>
+<%= link_to 'Home page', root_path %>

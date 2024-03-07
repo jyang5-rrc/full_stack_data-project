@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'about', to: 'static_pages#about'
   get 'categories', to: 'categories#categories', as: 'categories'
   get 'brands', to: 'brands#brands', as: 'brands'
+  get 'product_tpyes', to: 'product_types#product_types', as: 'product_types'
+  get 'search', to: 'products#search', as: 'search'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
