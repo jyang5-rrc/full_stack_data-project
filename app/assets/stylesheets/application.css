@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+/* Add to your CSS file */
+h2 {
+  text-align: center;
+  color: #848484;
+  font: sans-serif;
+  font-size: 2em;
+}
+
+#recommended-products .card-img-top {
+  height: 200px; /* Adjust as needed */
+  width: auto;
+  object-fit: contain;
+}
+
+#recommended-products .btn-view {
+  display: inline-block;
+  background-color: #029e58;
+  color: white;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
+
+#recommended-products .btn-view:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid #007bff;
+}

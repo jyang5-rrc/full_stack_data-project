@@ -1,0 +1,10 @@
+<h2><%= @product_type.product_type_name%></h2>
+  <% if @products.present? %>
+    <ul>
+      <% @products.each do |product| %>
+        <li><%= product.product_name %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>No products found for this product type</p>
+  <% end %>

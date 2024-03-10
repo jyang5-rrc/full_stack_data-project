@@ -6,6 +6,28 @@ Rails.application.routes.draw do
   get 'brands', to: 'brands#brands', as: 'brands'
   get 'product_tpyes', to: 'product_types#product_types', as: 'product_types'
   get 'search', to: 'products#search', as: 'search'
+  get 'products/:id', to: 'products#show', as: 'product'
+
+  # define routes for the categories controller that are nested under the categories resource
+  # /categories/:id/show_products
+  resources :categories do
+    member do
+      get 'show_products'
+    end
+  end
+
+  resources :brands do
+    member do
+      get 'show_products'
+    end
+  end
+
+  resource :product_types do
+    member do
+      get 'show_products'
+    end
+  end
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

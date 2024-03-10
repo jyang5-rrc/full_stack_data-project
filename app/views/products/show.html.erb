@@ -1,0 +1,9 @@
+<h1><%=@product.product_name %></h1>
+
+<p><strong>Price:</strong> $<%= @product.price %></p>
+<p><strong>Rating:</strong> <%= @product.rating %></p>
+<p><strong>Category:</strong> <%= @product.category.present? ? @product.category.category_name : 'No Category' %></p>
+<p><strong>Brand:</strong> <%= @product.brand.brand_name %></p>
+<p><strong>Product Type:</strong> <%= @product.product_type.product_type_name %></p>
+<p><strong>Description:</strong> <%= @product.description %></p>
+<p><strong>Product Image:</strong> <%= image_tag @product.image_link, class: 'img-fluid img-thumbnail' %></p>

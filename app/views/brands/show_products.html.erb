@@ -1,0 +1,20 @@
+<h2><%= @brand.brand_name%>
+  <% if @products.present? %>
+    <div class="row mt-3">
+      <% @products.each do |product| %>
+        <div class="col-md-4 col-lg-3 mb-4">
+          <div class="card h-100">
+            <%= image_tag product.image_link, class: "card-img-top", alt: product.product_name %>
+            <div class="card-body">
+              <h5 class="card-title"><%= product.product_name %></h5>
+              <p class="card-text">$<%= product.price %></p>
+              <p class="card-text">Rating: <%= product.rating %></p>
+              <%= link_to 'View', product_path(product), class: 'btn btn-primary btn-view' %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+    <p>No products found for this brand</p>
+  <% end %>
