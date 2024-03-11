@@ -53,3 +53,7 @@ body {
   padding-top: 200px; /* Adjust based on the actual height of your header */
 }
 
+
+#category .btn-sm{
+  background-color: #029e58;
+}
