@@ -14,12 +14,13 @@
  *= require_self
  */
 /* Add to your CSS file */
-h2{
+#main h2{
   text-align: center;
   color: #848484;
   font: sans-serif;
   font-size: 2em;
 }
+
 
 #recommended-products .card-img-top {
   height: 200px; /* Adjust as needed */
