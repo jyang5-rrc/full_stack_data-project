@@ -14,7 +14,7 @@
  *= require_self
  */
 /* Add to your CSS file */
-h2 {
+h2{
   text-align: center;
   color: #848484;
   font: sans-serif;
@@ -47,3 +47,8 @@ h2 {
   color: black;
   border: 1px solid #007bff;
 }
+
+body {
+  padding-top: 200px; /* Adjust based on the actual height of your header */
+}
+
