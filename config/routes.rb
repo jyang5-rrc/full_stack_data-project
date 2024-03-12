@@ -22,9 +22,9 @@ Rails.application.routes.draw do
     end
   end
 
-  resource :product_types do
+  resources :product_types do
     member do
-      get 'show_products'
+      get :show_products
     end
   end
 
