@@ -28,6 +28,10 @@ gem "turbo-rails"
 # http client gem
 gem 'httparty'
 
+# Pagination
+gem 'kaminari'
+
+
 # bulk inserts
 gem 'activerecord-import'
 
