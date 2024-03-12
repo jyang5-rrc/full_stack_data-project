@@ -12,14 +12,18 @@
       <tbody>
         <% @brands.each_with_index do |brand, index| %>
           <tr>
-            <td><%= index + 1 %></td>
+            <td><%= (index + 1) + ((@brands.current_page - 1) * @brands.limit_value) %></td>
             <td><%= brand.brand_name %></td>
             <td>
-              <%= link_to 'Show Products', show_products_brand_path(brand), class: 'btn btn-primary btn-sm ' %>
+              <%= link_to 'Show Products', show_products_brand_path(brand), class: 'btn btn-primary btn-sm' %>
             </td>
           </tr>
         <% end %>
       </tbody>
     </table>
   </div>
+  <div class="pagination-container d-flex justify-content-center my-4">
+    <%= paginate @brands, class: 'pagination' %>
+  </div>
+
 </div>

@@ -57,3 +57,23 @@ body {
 #category .btn-sm{
   background-color: #029e58;
 }
+
+
+.pagination-container .pagination {
+  padding: .5rem 1rem; /* Adjust padding as needed */
+  margin-left: 2px; /* Space between buttons */
+}
+
+.pagination-container .pagination .page-item.active .page-link {
+  z-index: 1;
+  color: #fff;
+  background-color: #029e58;
+  border-color: #029e58;
+}
+
+.pagination-container .pagination .page-link {
+  z-index: 1;
+  color: #029e58;
+  background-color: #fff;
+  border: 1px solid #029e58;
+}
